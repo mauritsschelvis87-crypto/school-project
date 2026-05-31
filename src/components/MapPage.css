@@ -4,75 +4,72 @@
   height: 100vh;
   overflow: hidden;
   background-color: #f0f0f0;
-  display: flex; /* Use flexbox to center the wrapper */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url('../assets/marco-polo-cursor.jpg') 16 16, url('../assets/marco-polo-cursor.png') 16 16, auto;
+}
+
+.map-container .image-and-hotspots-wrapper,
+.map-container .world-map,
+.map-container .hotspot {
+  cursor: inherit;
 }
 
 .image-and-hotspots-wrapper {
-  position: relative; /* Hotspots will be positioned relative to this */
-  display: inline-block; /* Shrink to fit content */
-  max-width: 100%; /* Ensure it doesn't overflow map-container */
-  max-height: 100%; /* Ensure it doesn't overflow map-container */
-  width: 100%; /* Ensure it takes full width for object-fit:cover */
-  height: 100%; /* Ensure it takes full height for object-fit:cover */
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  --hotspot-scale: 1;
 }
 
 .world-map {
   display: block;
-  width: 100%; /* Fill the wrapper's width */
-  height: 100%; /* Fill the wrapper's height */
-  object-fit: cover; /* Changed from 'contain' back to 'cover' */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hotspot {
   position: absolute;
-  width: 26px; /* Increased size of the clickable area to match marker */
-  height: 26px; /* Increased size of the clickable area to match marker */
-  transform: translate(-50%, -50%); /* Center the hotspot on its coordinates */
-  cursor: pointer;
-  z-index: 10; /* Ensure hotspots are above the map */
+  transform: translate(-50%, -50%);
+  z-index: 10;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: calc(2px * var(--hotspot-scale, 1));
+}
+
+.hotspot-year {
+  font-size: calc(0.6rem * var(--hotspot-scale, 1));
+  font-weight: 700;
+  color: #1a2838;
+  background-color: #daa520;
+  padding: calc(2px * var(--hotspot-scale, 1)) calc(5px * var(--hotspot-scale, 1));
+  border-radius: 3px;
+  border: 1px solid #1a2838;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .hotspot-marker {
-  width: 16px; /* Made larger */
-  height: 16px; /* Made larger */
-  background-color: #FFD700; /* Changed to gold */
+  width: calc(12px * var(--hotspot-scale, 1));
+  height: calc(12px * var(--hotspot-scale, 1));
+  background-color: #daa520;
   border-radius: 50%;
-  border: 2px solid white;
+  border: calc(2px * var(--hotspot-scale, 1)) solid black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease;
 }
 
+.hotspot--active {
+  z-index: 200;
+}
+
 .hotspot:hover .hotspot-marker {
-  transform: scale(1.5); /* Enlarge marker on hover */
-}
-
-.info-box {
-  position: absolute;
-  bottom: calc(100% + 10px); /* Position above the hotspot */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  white-space: nowrap; /* Prevent text from wrapping */
-  z-index: 20; /* Ensure info box is above other elements */
-  pointer-events: none; /* Allow interaction with elements behind the info box */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.info-box h3 {
-  margin: 0 0 5px 0;
-  font-size: 1.1em;
-  color: #007bff; /* Highlight title */
-}
-
-.info-box p {
-  margin: 0;
-  font-size: 0.9em;
+  transform: scale(1.35);
 }

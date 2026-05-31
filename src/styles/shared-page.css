@@ -1,0 +1,23 @@
+.shared-page-background {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  background-color: #8b6740;
+  background-image: url('../assets/marco-polo-background-clean.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.content-page {
+  box-sizing: border-box;
+  padding: 24px 20px 48px;
+}
+
+.centered-content {
+  position: relative;
+  width: 560px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+}

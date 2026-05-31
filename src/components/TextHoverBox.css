@@ -1,0 +1,12 @@
+.text-hover-box {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  font-size: calc(1rem * var(--hotspot-scale, 1));
+}
+
+.text-hover-box .story-box {
+  width: calc(260px * var(--hotspot-scale, 1));
+  padding: calc(12px * var(--hotspot-scale, 1)) calc(14px * var(--hotspot-scale, 1));
+  padding-top: calc(14px * var(--hotspot-scale, 1));
+}

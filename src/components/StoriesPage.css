@@ -1,0 +1,72 @@
+.stories-page .centered-content {
+  max-width: calc(100% - 120px);
+}
+
+.timeline-sidebar {
+  position: absolute;
+  right: calc(100% + 20px);
+  top: 0;
+  bottom: 0;
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-bar {
+  flex: 1;
+  width: 6px;
+  background: linear-gradient(180deg, #b8860b, #daa520, #f0d878, #daa520, #b8860b);
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(218, 165, 32, 0.35);
+}
+
+.stories-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.story-row {
+  position: relative;
+}
+
+.story-row-timeline {
+  position: absolute;
+  right: calc(100% + 20px);
+  width: 72px;
+  top: 0;
+  min-height: 100%;
+}
+
+.story-row-year {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #3d2e1c;
+  background-color: #f0d878;
+  padding: 3px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.story-row-dot {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  width: 14px;
+  height: 14px;
+  transform: translateX(-50%);
+  background-color: #daa520;
+  border: 3px solid #1a2838;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.stories-stream .story-box {
+  width: 100%;
+}

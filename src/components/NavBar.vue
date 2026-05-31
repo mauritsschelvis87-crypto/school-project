@@ -1,23 +1,23 @@
 <template>
   <nav class="navbar">
     <ul class="nav-list">
-      <li class="nav-item"><a href="#" @click.prevent="$emit('navigate', 'Home')" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="#" @click.prevent="$emit('navigate', 'Timeline')" class="nav-link">Timeline</a></li>
-      <li class="nav-item"><a href="#" @click.prevent="$emit('navigate', 'Stories')" class="nav-link">Stories</a></li>
-      <li class="nav-item"><a href="#" @click.prevent="$emit('navigate', 'Game')" class="nav-link">Game</a></li>
+      <li v-for="item in items" :key="item">
+        <a
+          href="#"
+          class="nav-link"
+          :class="{ 'nav-link--active': activePage === item }"
+          @click.prevent="$emit('navigate', item)"
+        >{{ item }}</a>
+      </li>
     </ul>
   </nav>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import './NavBar.css'; // Import the CSS file for the navbar
+<script setup lang="ts">
+import './NavBar.css';
 
-export default defineComponent({
-  name: 'NavBar',
-  emits: ['navigate'], // Declare the custom event
-  setup() {
-    return {};
-  },
-});
+defineProps<{ activePage: string }>();
+defineEmits<{ navigate: [page: string] }>();
+
+const items = ['Home', 'Timeline', 'Stories', 'Game'];
 </script>

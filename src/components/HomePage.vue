@@ -1,17 +1,9 @@
 <template>
-  <div class="home-page-content">
-    <h1>Welkom op de Homepage!</h1>
+  <div class="home-page">
+    <img src="../assets/marco-polo.jpg" alt="Marco Polo" class="home-portrait" />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
 import './HomePage.css';
-
-export default defineComponent({
-  name: 'HomePage',
-  setup() {
-    return {};
-  },
-});
 </script>

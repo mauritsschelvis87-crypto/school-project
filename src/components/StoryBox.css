@@ -1,0 +1,61 @@
+.story-box {
+  position: relative;
+  box-sizing: border-box;
+  background: linear-gradient(160deg, #1a2838 0%, #243447 50%, #1a2838 100%);
+  color: #f0f4f8;
+  padding: 14px 14px 14px;
+  padding-top: 16px;
+  border-radius: 8px;
+  border: 2px solid #daa520;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(26, 40, 56, 0.9);
+  overflow: hidden;
+}
+
+.story-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #b8860b, #daa520, #f0d878, #daa520, #b8860b);
+}
+
+.story-box-year {
+  display: inline-block;
+  background-color: #daa520;
+  color: #1a2838;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin: 0 0 8px;
+}
+
+.story-box-name {
+  margin: 0 0 6px;
+  padding-bottom: 6px;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #ffe9a8;
+  border-bottom: 1px solid rgba(218, 165, 32, 0.45);
+  line-height: 1.25;
+}
+
+.story-box-summary {
+  margin: 0;
+  font-size: 0.88em;
+  line-height: 1.45;
+  color: #d8e4ef;
+}
+
+.story-box-story {
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(218, 165, 32, 0.35);
+  font-size: 0.86em;
+  line-height: 1.55;
+  color: #e8f0f6;
+}

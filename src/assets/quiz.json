@@ -1,0 +1,92 @@
+[
+  {
+    "question": "In welk jaar begon de grote reis in Venetië?",
+    "options": {
+      "A": "1271",
+      "B": "1280",
+      "C": "1292"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "In welk land ligt Peking?",
+    "options": {
+      "A": "Iran",
+      "B": "China",
+      "C": "Italië"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "Waar is het zomerpaleis van keizer Kublai Khan?",
+    "options": {
+      "A": "Xanadu",
+      "B": "Venetië",
+      "C": "Hormuz"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "Jeruzalem ligt in welk land?",
+    "options": {
+      "A": "Turkije",
+      "B": "Israël",
+      "C": "Afghanistan"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "Wat is Hormuz?",
+    "options": {
+      "A": "Een eiland met boten",
+      "B": "Een bergpas",
+      "C": "Een woestijnstad"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "In welk jaar vertrokken ze vanuit Quanzhou naar huis?",
+    "options": {
+      "A": "1275",
+      "B": "1280",
+      "C": "1292"
+    },
+    "correct": "C"
+  },
+  {
+    "question": "Kashgar is een belangrijke…",
+    "options": {
+      "A": "marktstad",
+      "B": "haven in Italië",
+      "C": "woestijn zonder water"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "Waar begon de reis van Marco Polo?",
+    "options": {
+      "A": "Peking",
+      "B": "Venetië",
+      "C": "Xi'an"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "Tabriz ligt in welk land?",
+    "options": {
+      "A": "China",
+      "B": "Iran",
+      "C": "Italië"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "Bij welke stad zagen ze de Chinese muur?",
+    "options": {
+      "A": "Yumen",
+      "B": "Venetië",
+      "C": "Akko"
+    },
+    "correct": "A"
+  }
+]
