@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: url('../assets/marco-polo-cursor.jpg') 16 16, url('../assets/marco-polo-cursor.png') 16 16, auto;
+  cursor: url('../assets/marco-polo-cursor.png') 16 16, auto;
 }
 
 .map-container .image-and-hotspots-wrapper,
@@ -42,18 +42,6 @@
   flex-direction: column;
   align-items: center;
   gap: calc(2px * var(--hotspot-scale, 1));
-}
-
-.hotspot-year {
-  font-size: calc(0.6rem * var(--hotspot-scale, 1));
-  font-weight: 700;
-  color: #1a2838;
-  background-color: #daa520;
-  padding: calc(2px * var(--hotspot-scale, 1)) calc(5px * var(--hotspot-scale, 1));
-  border-radius: 3px;
-  border: 1px solid #1a2838;
-  white-space: nowrap;
-  pointer-events: none;
 }
 
 .hotspot-marker {

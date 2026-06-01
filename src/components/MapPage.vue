@@ -22,7 +22,6 @@
         @mouseleave="activeIndex = null"
       >
         <span class="hotspot-marker"></span>
-        <span class="hotspot-year">{{ hotspot.year }}</span>
         <TextHoverBox v-if="activeIndex === index" :hotspot="hotspot" />
       </div>
     </div>

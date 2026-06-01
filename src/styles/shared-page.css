@@ -3,9 +3,9 @@
   min-height: 0;
   overflow-y: auto;
   background-color: #8b6740;
-  background-image: url('../assets/marco-polo-background-clean.jpg');
+  background-image: url('../assets/marco-polo-background.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 62%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
