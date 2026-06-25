@@ -1,0 +1,17 @@
+stages:
+  - publish
+
+publish:
+  stage: publish
+  image: docker:24
+  services:
+    - docker:24-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_TOKEN"
+  script:
+    - docker build -t $DOCKERHUB_USERNAME/school-project:latest .
+    - docker push $DOCKERHUB_USERNAME/school-project:latest
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
